@@ -124,6 +124,8 @@
       - "{{ provisioner.topology.network }}"
       - "{{ vm_ip_list }}"
 
+- debug: var=vm_ip_list
+
 - name: add hosts to host list
   add_host:
       name="{{ item.item.item[0] }}"
